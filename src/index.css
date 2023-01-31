@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+body {
+  font-family: "Comfortaa", cursive;
+  background: #1e2129;
+  color: #babdc5;
+}
+body, #root {
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 80vh;
+}
+
+header {
+  background: #2f3441;
+}
+
+header, header a, header .navbar-nav *, .card-movie-title a, #movie-bar_tab_controls a:not(.active), .container-404 h4 {
+  color: #eee !important;
+}
+.card-movie-title a:hover {
+  font-weight: 600;
+}
+.card-movie-tile .card-link {
+  background: rgb(31,31,31);
+  color: rgb(87,153,239);
+  width: 100%;
+}
+.card-movie-tile .card-img {
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-404 {
+  text-align: center;
+}
+
+.container-404 h4 {
+  font-size: calc(2.350rem + 4.8vw);
+}
+
+.navbar-toggler {
+  --bs-navbar-color: rgb(87,153,239);
+  --bs-navbar-toggler-border-color: rgb(87,153,239);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: rgb(87,153,239);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(87,153,239);
+  --bs-btn-hover-border-color: rgb(87,153,239);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(87,153,239);
+  --bs-btn-active-border-color: rgb(87,153,239);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: rgb(87,153,239);
+  --bs-btn-disabled-border-color: rgb(87,153,239);
+}
+
+.card-movie-tile {
+  --bs-card-bg: #131418;
+  --bs-card-border-color: none;
+  --bs-card-border-radius: 20px;
+  -webkit-animation: bummer .3s;
+  animation: bummer .3s;
+  -webkit-transform: scale(0,0); 
+  transform: scale(0,0);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  min-height: calc(12.35rem + 20.8vw);
+}
+
+.card-movie-tile .card-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  min-height: 250px;
+  height: calc(11.15em + 11.5vw);
+  transition: .5s ease-in-out;
+  backface-visibility: hidden;
+  pointer-events: none;
+  border-radius: 20px 20px 0 0;
+}
+.card-movie-tile:hover {
+  transform: scale(1.01);
+}
+.card-movie-tile:hover .card-img {
+  opacity: .7 !important;
+}
+
+.card-movie-title {
+  height: 100px;
+}
+
+.container-home-landing-wrapper {
+  height: calc(90vh - 73px);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  /* position: absolute; */
+}
+.container-home-landing-cover {
+  position: absolute;
+  height: calc(90vh - 73px);
+  width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  top: 0; left: 0;
+  opacity: .3;
+}
+
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container-home-landing-cover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 50vh;
+  background: #13151a;
+  background: -moz-linear-gradient(0deg,#13151a 0,rgba(19,21,26,0) 100%);
+  background: -webkit-linear-gradient(0deg,#13151a 0,rgba(19,21,26,0) 100%);
+  background: linear-gradient(0deg,#13151a 0,rgba(19,21,26,0) 100%);
+}
+img {
+  animation-delay: .6s;
+  animation: seasons-show .6s forwards;
+}
+@keyframes seasons-show{from{opacity:0}to{opacity:1}}
+
+.container-home-landing-wrapper, .container-home-landing-wrapper .container-home-landing, footer {
+  position: relative;
+}
+
+.category-head-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.category-title {
+  padding: 20px 0 20px 0;
+  font-weight: 600;
+  font-size: calc(0.85rem + 1.2vw);
+}
+
+.category-action-more {
+  font-weight: 600;
+}
+
+a, .category-action-more {
+  text-decoration: none;
+}
+
+.top-picks-wrapper {
+  background: #2d2f38;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: calc(-2% - 10px);
+}
+
+.react-multi-carousel-list {
+  overflow: initial !important;
+}
+@media screen and (min-width: 1024px) {
+  .react-multi-carousel-list {
+    overflow: hidden !important;
+  }
+}
+
+/* .react-multi-carousel-dot-list {
+  bottom: -35px !important;
+} */
+
+@-webkit-keyframes bummer {
+  100% {
+      -webkit-transform: scale(1,1); 
+  }
+}
+
+@keyframes bummer {
+  100% {
+      transform: scale(1,1); 
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-movie-tile .card-img {
+    height: 250px;
+  }
+}
